@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Geolocation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list *ngIf="coords">
+    <ion-item>
+      <h2 *ngIf="timestamp">{{timestamp}}</h2>
+      <p>Timestamp</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{coords.accuracy}}</h2>
+      <p>Accuracy</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{coords.altitude}}</h2>
+      <p>Altitude</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{coords.altitudeAccuracy}}</h2>
+      <p>AltitudeAccuracy</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{coords.heading}}</h2>
+      <p>Heading</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{coords.latitude}}</h2>
+      <p>Latitude</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{coords.longitude}}</h2>
+      <p>Longitude</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{coords.speed}}</h2>
+      <p>Speed</p>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="startWatching()">Start watching</button>
+</ion-content>
